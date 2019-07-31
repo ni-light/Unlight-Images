@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>miya221</author>
+      <authoring_tool>3dsMax 7 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=0;ExportTangents=0;ExportAnimations=1;SampleAnim=0;ExportAnimClip=0;BakeMatrices=0;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+      <source_data>file:///D:/project/unlight/obj/deck/deck1.max</source_data>
+    </contributor>
+    <created>2009-09-30T07:54:04Z</created>
+    <modified>2009-09-30T07:54:08Z</modified>
+    <unit meter="0.0254" name="inch"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_lights>
+    <light id="ambient-environment-light" name="Ambient">
+      <technique_common>
+        <ambient>
+          <color>0.411765 0.411765 0.411765</color>
+        </ambient>
+      </technique_common>
+      <extra>
+        <technique profile="FCOLLADA">
+          <intensity>1</intensity>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="deck.png" name="deck_png">
+      <init_from>./tex/deck.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="_Default" name="_Default">
+      <instance_effect url="#_Default-fx"/>
+      <extra>
+        <technique profile="FCOLLADA">
+          <dynamic_attributes>
+            <DirectX____l___W__ sid="DirectX____l___W__">
+              <enabled type="bool">0</enabled>
+              <effect type="int">0</effect>
+              <dxStdMat type="bool">0</dxStdMat>
+            </DirectX____l___W__>
+          </dynamic_attributes>
+        </technique>
+      </extra>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="_Default-fx" name="_Default">
+      <profile_COMMON>
+        <newparam sid="deck_png-surface">
+          <surface type="2D">
+            <init_from>deck.png</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="deck_png-sampler">
+          <sampler2D>
+            <source>deck_png-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588235 0.588235 0.588235 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="deck_png-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.1</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="default-mesh" name="default">
+      <mesh>
+        <source id="default-mesh-positions">
+          <float_array id="default-mesh-positions-array" count="48">-3 -3.95 0 -3 3.95 0 -2.75 4.2 0 2.75 4.2 0 3 3.95 0 3 -3.95 0 2.75 -4.2 0 -2.75 -4.2 0 -3 -3.95 2 -3 3.95 2 -2.75 4.2 2 2.75 4.2 2 3 3.95 2 3 -3.95 2 2.75 -4.2 2 -2.75 -4.2 2</float_array>
+          <technique_common>
+            <accessor source="#default-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="default-mesh-normals">
+          <float_array id="default-mesh-normals-array" count="252">-0.707106 -0.707107 0 -0.707106 -0.707107 0 -0.707106 -0.707107 0 -0.707106 -0.707107 0 -0.707106 -0.707107 0 -0.707106 -0.707107 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.707106 0.707107 0 -0.707106 0.707107 0 -0.707106 0.707107 0 -0.707106 0.707107 0 -0.707106 0.707107 0 -0.707106 0.707107 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0.707106 0.707107 0 0.707106 0.707107 0 0.707106 0.707107 0 0.707106 0.707107 0 0.707106 0.707107 0 0.707106 0.707107 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.707106 -0.707107 0 0.707106 -0.707107 0 0.707106 -0.707107 0 0.707106 -0.707107 0 0.707106 -0.707107 0 0.707106 -0.707107 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#default-mesh-normals-array" count="84" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="default-mesh-map-channel1">
+          <float_array id="default-mesh-map-channel1-array" count="144">0.9914 0.239473 0 0.9914 0.249543 0 0.900006 0.249543 0 0.900006 0.239473 0 0.890867 0.601356 0 0.890867 0.259263 0 0.799473 0.259263 0 0.799473 0.601356 0 0.890867 0.249543 0 0.890867 0.239473 0 0.799473 0.239473 0 0.799473 0.249543 0 0.799473 0.239473 0 0.890867 0.239473 0 0.890867 0.017945 0 0.799473 0.017945 0 0.799473 0.017945 0 0.890867 0.017945 0 0.890867 0.007876 0 0.799473 0.007876 0 0.900006 0.259263 0 0.9914 0.259263 0 0.9914 0.601356 0 0.900006 0.601356 0 0.900006 0.007876 0 0.9914 0.007876 0 0.9914 0.017945 0 0.900006 0.017945 0 0.900006 0.017945 0 0.9914 0.017945 0 0.9914 0.239473 0 0.900006 0.239473 0 0.718649 0.98528 0 0.73 0.996757 0 0.979733 0.996757 0 0.991085 0.98528 0 0.991085 0.622587 0 0.979733 0.611109 0 0.73 0.611109 0 0.718649 0.622587 0 0.037189 0.007297 0 0.676211 0.007297 0 0.705258 0.036666 0 0.705258 0.964734 0 0.676211 0.994103 0 0.037189 0.994103 0 0.008142 0.964734 0 0.008142 0.036666 0</float_array>
+          <technique_common>
+            <accessor source="#default-mesh-map-channel1-array" count="48" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="default-mesh-vertices">
+          <input semantic="POSITION" source="#default-mesh-positions"/>
+        </vertices>
+        <triangles material="_Default" count="28">
+          <input semantic="VERTEX" source="#default-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#default-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#default-mesh-map-channel1" offset="2" set="1"/>
+          <p>15 0 0 8 1 1 0 2 2 15 3 0 0 4 2 7 5 3 8 6 4 9 7 5 1 8 6 8 9 4 1 10 6 0 11 7 9 12 8 10 13 9 2 14 10 9 15 8 2 16 10 1 17 11 2 18 12 10 19 13 11 20 14 2 21 12 11 22 14 3 23 15 3 24 16 11 25 17 12 26 18 3 27 16 12 28 18 4 29 19 4 30 20 12 31 21 13 32 22 4 33 20 13 34 22 5 35 23 5 36 24 13 37 25 14 38 26 5 39 24 14 40 26 6 41 27 6 42 28 14 43 29 15 44 30 6 45 28 15 46 30 7 47 31 1 48 32 2 49 33 3 50 34 1 51 32 3 52 34 4 53 35 1 54 32 4 55 35 5 56 36 1 57 32 5 58 36 6 59 37 1 60 32 6 61 37 7 62 38 1 63 32 7 64 38 0 65 39 15 66 40 14 67 41 13 68 42 15 69 40 13 70 42 12 71 43 15 72 40 12 73 43 11 74 44 15 75 40 11 76 44 10 77 45 15 78 40 10 79 45 9 80 46 15 81 40 9 82 46 8 83 47</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="deck1.max" name="deck1_max">
+      <node id="default-node" name="default" type="NODE">
+        <translate>0 0 0</translate>
+        <instance_geometry url="#default-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_Default" target="#_Default">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="VisualSceneNode" type="NODE">
+        <instance_light url="#ambient-environment-light"/>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#deck1.max"/>
+  </scene>
+</COLLADA>

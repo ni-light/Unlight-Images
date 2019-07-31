@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>miya221</author>
+      <authoring_tool>3dsMax 7 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=0;ExportTangents=0;ExportAnimations=1;SampleAnim=0;ExportAnimClip=0;BakeMatrices=0;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+      <source_data>file:///D:/project/unlight/obj/dice/dice1.max</source_data>
+    </contributor>
+    <created>2009-09-30T07:58:38Z</created>
+    <modified>2009-09-30T07:58:39Z</modified>
+    <unit meter="0.0254" name="inch"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_lights>
+    <light id="ambient-environment-light" name="Ambient">
+      <technique_common>
+        <ambient>
+          <color>0.411765 0.411765 0.411765</color>
+        </ambient>
+      </technique_common>
+      <extra>
+        <technique profile="FCOLLADA">
+          <intensity>1</intensity>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="dice.png" name="dice_png">
+      <init_from>./tex/dice.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="_Default" name="_Default">
+      <instance_effect url="#_Default-fx"/>
+      <extra>
+        <technique profile="FCOLLADA">
+          <dynamic_attributes>
+            <DirectX____l___W__ sid="DirectX____l___W__">
+              <enabled type="bool">0</enabled>
+              <effect type="int">0</effect>
+              <dxStdMat type="bool">0</dxStdMat>
+            </DirectX____l___W__>
+          </dynamic_attributes>
+        </technique>
+      </extra>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="_Default-fx" name="_Default">
+      <profile_COMMON>
+        <newparam sid="dice_png-surface">
+          <surface type="2D">
+            <init_from>dice.png</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="dice_png-sampler">
+          <sampler2D>
+            <source>dice_png-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588235 0.588235 0.588235 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="dice_png-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.1</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="default-mesh" name="default">
+      <mesh>
+        <source id="default-mesh-positions">
+          <float_array id="default-mesh-positions-array" count="288">-4.6 -4.6 5 -4.6 4.6 5 4.6 4.6 5 4.6 -4.6 5 -4.6 -4.6 -5 4.6 -4.6 -5 4.6 4.6 -5 -4.6 4.6 -5 4.6 5 -4.6 4.6 5 4.6 -4.6 5 4.6 -4.6 5 -4.6 -4.6 -5 -4.6 -4.6 -5 4.6 4.6 -5 4.6 4.6 -5 -4.6 -4.6 -4.6 5 -5 -4.6 4.6 -5 4.6 4.6 -4.6 4.6 5 -4.6 4.6 5 -4.6 5 4.6 4.6 5 4.6 4.6 4.6 5 4.6 4.6 5 5 4.6 4.6 5 -4.6 4.6 4.6 -4.6 5 4.6 -4.6 5 4.6 -5 4.6 -4.6 -5 4.6 -4.6 -4.6 5 -4.6 -4.6 -5 -4.6 -5 -4.6 4.6 -5 -4.6 4.6 -4.6 -5 4.6 -4.6 -5 5 -4.6 -4.6 5 4.6 -4.6 4.6 4.6 -5 4.6 4.6 -5 4.6 5 -4.6 -4.6 5 -4.6 -4.6 4.6 -5 -4.6 4.6 -5 -5 4.6 -4.6 -5 -4.6 -4.6 -4.6 -4.6 -5 5 -4.6 -4.6 4.6 -5 -4.6 4.6 -5 4.6 5 -4.6 4.6 5 4.6 4.6 4.6 5 4.6 4.6 5 -4.6 5 4.6 -4.6 -4.6 5 4.6 -5 4.6 4.6 -5 4.6 -4.6 -4.6 5 -4.6 -5 -4.6 4.6 -4.6 -5 4.6 -4.6 -5 -4.6 -5 -4.6 -4.6 -4.6 -5 4.6 -5 -4.6 4.6 -4.6 -4.6 5 -5 4.6 4.6 -4.6 5 4.6 -4.6 4.6 5 4.6 5 4.6 5 4.6 4.6 4.6 4.6 5 5 -4.6 4.6 4.6 -5 4.6 4.6 -4.6 5 -5 -4.6 -4.6 -4.6 -5 -4.6 -4.6 -4.6 -5 4.6 -5 -4.6 5 -4.6 -4.6 4.6 -4.6 -5 5 4.6 -4.6 4.6 5 -4.6 4.6 4.6 -5 -4.6 5 -4.6 -5 4.6 -4.6 -4.6 4.6 -5 5 -4.6 -4.6 5 -4.6 4.6 5 4.6 4.6 5 4.6 -4.6 -5 -4.6 -4.6 -5 4.6 -4.6 -5 4.6 4.6 -5 -4.6 4.6</float_array>
+          <technique_common>
+            <accessor source="#default-mesh-positions-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="default-mesh-normals">
+          <float_array id="default-mesh-normals-array" count="396">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 -0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.707107 -0.707107 0 -0.57735 -0.57735 0.57735 -0.57735 -0.57735 0.57735 -0.57735 -0.57735 0.57735 -0.57735 0.57735 0.57735 -0.57735 0.57735 0.57735 -0.57735 0.57735 0.57735 0.57735 0.57735 0.57735 0.57735 0.57735 0.57735 0.57735 0.57735 0.57735 0.57735 -0.57735 0.57735 0.57735 -0.57735 0.57735 0.57735 -0.57735 0.57735 -0.57735 -0.57735 -0.57735 -0.57735 -0.57735 -0.57735 -0.57735 -0.57735 -0.57735 0.57735 -0.57735 -0.57735 0.57735 -0.57735 -0.57735 0.57735 -0.57735 -0.57735 0.57735 0.57735 -0.57735 0.57735 0.57735 -0.57735 0.57735 0.57735 -0.57735 -0.57735 0.57735 -0.57735 -0.57735 0.57735 -0.57735 -0.57735 0.57735 -0.57735 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#default-mesh-normals-array" count="132" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="default-mesh-map-channel1">
+          <float_array id="default-mesh-map-channel1-array" count="288">0.997763 0.002601 0 0.997763 0.399652 0 0.600711 0.399652 0 0.600711 0.002601 0 0.600711 0.399635 0 0.997763 0.399635 0 0.997763 0.002583 0 0.600711 0.002583 0 0.601609 0.995847 0 0.601609 0.401899 0 0.007661 0.401899 0 0.007661 0.995847 0 0.190735 0.002559 0 0.190735 0.399611 0 0.587787 0.399611 0 0.587787 0.002559 0 0.587804 0.002583 0 0.587804 0.399635 0 0.190753 0.399635 0 0.190753 0.002583 0 0.928799 0.712194 0 0.916464 0.712194 0 0.916464 0.410437 0 0.928799 0.410437 0 0.873622 0.711826 0 0.885957 0.711826 0 0.885957 0.410069 0 0.873622 0.410069 0 0.929622 0.410437 0 0.941957 0.410437 0 0.941957 0.712194 0 0.929622 0.712194 0 0.845622 0.4107 0 0.857957 0.4107 0 0.857957 0.712457 0 0.845622 0.712457 0 0.872799 0.711826 0 0.860464 0.711826 0 0.860464 0.410069 0 0.872799 0.410069 0 0.94278 0.712194 0 0.955115 0.712194 0 0.955115 0.410437 0 0.94278 0.410437 0 0.844799 0.4107 0 0.832464 0.4107 0 0.832464 0.712457 0 0.844799 0.712457 0 0.915641 0.410437 0 0.903306 0.410437 0 0.903306 0.712194 0 0.915641 0.712194 0 0.968273 0.712194 0 0.955937 0.712194 0 0.955937 0.410437 0 0.968273 0.410437 0 0.90101 0.410701 0 0.888674 0.410701 0 0.888674 0.712457 0 0.90101 0.712457 0 0.981431 0.410437 0 0.969095 0.410437 0 0.969095 0.712194 0 0.981431 0.712194 0 0.982253 0.410437 0 0.994589 0.410437 0 0.994589 0.712194 0 0.982253 0.712194 0 0.915641 0.738536 0 0.903306 0.726201 0 0.915641 0.726201 0 0.915641 0.725378 0 0.915641 0.713043 0 0.903306 0.713043 0 0.916464 0.725378 0 0.928799 0.713043 0 0.916464 0.713043 0 0.982253 0.725378 0 0.982253 0.713043 0 0.994589 0.713043 0 0.968273 0.713043 0 0.968273 0.725378 0 0.955937 0.725378 0 0.94278 0.713043 0 0.955115 0.725378 0 0.94278 0.725378 0 0.969095 0.713043 0 0.969095 0.725378 0 0.981431 0.725378 0 0.941957 0.713043 0 0.929622 0.725378 0 0.941957 0.725378 0 0.007661 0.995765 0 0.601609 0.995765 0 0.601609 0.401817 0 0.007661 0.401817 0</float_array>
+          <technique_common>
+            <accessor source="#default-mesh-map-channel1-array" count="96" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="default-mesh-vertices">
+          <input semantic="POSITION" source="#default-mesh-positions"/>
+        </vertices>
+        <triangles material="_Default" count="44">
+          <input semantic="VERTEX" source="#default-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#default-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#default-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 0 2 1 1 1 2 2 3 3 0 1 4 2 0 5 3 7 6 4 6 7 5 5 8 6 7 9 4 5 10 6 4 11 7 91 12 8 90 13 9 89 14 10 91 15 8 89 16 10 88 17 11 11 18 12 10 19 13 9 20 14 11 21 12 9 22 14 8 23 15 15 24 16 14 25 17 13 26 18 15 27 16 13 28 18 12 29 19 19 30 20 18 31 21 17 32 22 19 33 20 17 34 22 16 35 23 23 36 24 22 37 25 21 38 26 23 39 24 21 40 26 20 41 27 27 42 28 26 43 29 25 44 30 27 45 28 25 46 30 24 47 31 31 48 32 30 49 33 29 50 34 31 51 32 29 52 34 28 53 35 35 54 36 34 55 37 33 56 38 35 57 36 33 58 38 32 59 39 39 60 40 38 61 41 37 62 42 39 63 40 37 64 42 36 65 43 43 66 44 42 67 45 41 68 46 43 69 44 41 70 46 40 71 47 47 72 48 46 73 49 45 74 50 47 75 48 45 76 50 44 77 51 51 78 52 50 79 53 49 80 54 51 81 52 49 82 54 48 83 55 55 84 56 54 85 57 53 86 58 55 87 56 53 88 58 52 89 59 59 90 60 58 91 61 57 92 62 59 93 60 57 94 62 56 95 63 63 96 64 62 97 65 61 98 66 63 99 64 61 100 66 60 101 67 66 102 68 65 103 69 64 104 70 69 105 71 68 106 72 67 107 73 72 108 74 71 109 75 70 110 76 75 111 77 74 112 78 73 113 79 78 114 80 77 115 81 76 116 82 81 117 83 80 118 84 79 119 85 84 120 86 83 121 87 82 122 88 87 123 89 86 124 90 85 125 91 95 126 92 94 127 93 93 128 94 95 129 92 93 130 94 92 131 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="dice1.max" name="dice1_max">
+      <node id="default-node" name="default" type="NODE">
+        <translate>0 0 0</translate>
+        <instance_geometry url="#default-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_Default" target="#_Default">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="VisualSceneNode" type="NODE">
+        <instance_light url="#ambient-environment-light"/>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#dice1.max"/>
+  </scene>
+</COLLADA>
